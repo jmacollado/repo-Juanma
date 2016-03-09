@@ -1,0 +1,13 @@
+    1  apt-get install libpam-ldap
+    2  dpkg-reconfigure libpam-ldap
+    3  apt-get install libnss-ldap
+    4  nano /etc/libnss-ldap.conf 
+    5  cp /etc/libnss-ldap.conf /home/daw2/ex
+    6  nano /etc/nsswitch.conf 
+    7  getnet passwd
+    8  getent passwd
+    9  history > /home/daw2/examen/actividad6/act6.txt
+   10  cp /home/daw2/examen/ /home/daw2/compartida/
+   11  cp -R /home/daw2/examen/ /home/daw2/compartida/
+   12  cp /etc/nsswitch.conf /home/daw2/compartida/examen/actividad6/
+   13  history > /home/daw2/examen/actividad6/act6.txt 
