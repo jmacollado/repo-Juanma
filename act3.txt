@@ -1,0 +1,13 @@
+    1  cp -R /home/daw2/compartida/apache-tomcat-8.0.32 /usr/local/tomcat8
+    2  nano /usr/local/tomcat8/conf/server.xml 
+    3  nano /etc/apt/sources.list
+    4  apt-get update
+    5  apt-key --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+    6  apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+    7  apt-get update
+    8  apt-get install oracle-java8-set-default
+    9  nano /usr/local/tomcat8/conf/server.xml 
+   10  nano /usr/local/tomcat8/conf/server.xml 
+   11  nano /usr/local/tomcat8/conf/tomcat-users.xml
+   12  history
+   13  history > /home/daw2/examen/actividad3/act3.txt
