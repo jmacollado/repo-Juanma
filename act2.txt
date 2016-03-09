@@ -1,0 +1,7 @@
+    1  apt-get install apache2
+    2  ae2enmod ssl
+    3  a2enmod ssl
+    4  cd /etc/apache2/sites-available/
+    5  a2ensite default-ssl.conf 
+    6  service apache2 reload
+    7  history > /home/daw2/examen/actividad2/act2.txt
