@@ -1,0 +1,24 @@
+    1  apt-get install mysql-server
+    2  mysql -u root -p
+    3  apt-get install proftpd
+    4  cat /etc/passwd
+    5  cat /etc/shadow
+    6  passwd ftp
+    7  nano /etc/shells 
+    8  ftp localhost
+    9  mysql -u root -p
+   10  mkdir /home/daw2/escuela
+   11  mkdir /home/daw2/escuela/profesor
+   12  mkdir /home/daw2/escuela/delegado
+   13  mkdir /home/daw2/escuela/alumno
+   14  chown -R 1200:1500 /home/daw2/escuela/profesor
+   15  chown -R 1201:1500 /home/daw2/escuela/delegado/
+   16  chown -R 1201:1500 /home/daw2/escuela/alumno/
+   17  apt-get install proftpd-mod-mysql
+   18  mv /etc/proftpd/proftpd.conf /etc/proftpd/copia_privado_proftpd.conf
+   19  cp /etc/proftpd/copia_privado_proftpd.conf /etc/proftpd/proftpd.conf
+   20  nano /etc/proftpd/proftpd.conf 
+   21  nano /etc/proftpd/modules.conf 
+   22  nano /etc/proftpd/sql.conf 
+   23  sh /etc/init.d/proftpd restart
+   24  history >> /home/daw2/examen/actividad4/act4.txt 
