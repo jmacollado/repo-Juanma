@@ -1,0 +1,17 @@
+    1  apt-get install slapd ldap-utils
+    2  netstat -natp | grep 389
+    3  ldapadd -Y EXTERNAL -H ldapi:// -f /etc/ldap/schema/cosine.ldif 
+    4  mkdir /home/daw2/ldif
+    5  cp /home/daw2/compartida/ldif/ /home/daw2/
+    6  cp -R /home/daw2/compartida/ldif/ /home/daw2/
+    7  ls -l /home/daw2/ldif/
+    8  nano /home/daw2/ldif/3-comandos-ldap.txt 
+    9  cp /home/daw2/compartida/ldif/ /home/daw2/ldif/
+   10  cp -R /home/daw2/compartida/ldif/ /home/daw2/ldif/
+   11  nano /home/daw2/ldif/3-comandos-ldap.txt
+   12  ldapadd -Y EXTERNAL -H ldapi:// -f /home/daw2/ldif/backend.albarregas.lan.ldif 
+   13  ldapsearch -x -b dc=examen,dc=daw
+   14  history >> /home/daw2/examen/actividad5/act5.txt
+   15  apt-get install phpldapadmin
+   16  nano /etc/phpldapadmin/config.php 
+   17  ldapsearch -x -b dc=examen,dc=daw

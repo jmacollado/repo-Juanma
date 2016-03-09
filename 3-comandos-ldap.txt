@@ -1,0 +1,23 @@
+# Cargar el backend
+ldapadd -Y EXTERNAL -H ldapi:/// -f /home/daw2/ldif/backend.albarregas.lan.ldif
+
+# Cargar el frontend
+ldapadd -x -D cn=admin,dc=examen,dc=daw -W -f /home(daw2/lidif/frontend.albarregas.lan.ldif
+
+# Ver árbol del directorio con dominio empresa.local
+ldapsearch -x -b dc=empresa,dc=local "(objectclass=*)"
+
+# Crear estructura básica de directorio
+ldapadd -x -D cn=admin,dc=empresa,dc=local -W -f 0-estructura-basica-empresa.ldif
+
+# Añadir usuario
+ldapadd -x -D cn=admin,dc=empresa,dc=local -W -f 1-crear-usuario.ldif
+
+# Modificar usuario
+ldapmodify -x -D cn=admin,dc=empresa,dc=local -W -f 2-cambiar-usuario.ldif
+
+# Buscar usuarios cuyo uid contenga user
+ldapsearch -x -b dc=empresa,dc=local "(uid=*user*)"
+
+# Eliminar usuario user32
+ldapdelete -x -D cn=admin,dc=empresa,dc=local uid=user32,ou=usuarios,dc=empresa,dc=local -W
