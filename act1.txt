@@ -1,0 +1,7 @@
+    1  apt-get update
+    2  apt-get install samba
+    3  mkdir /home/daw2/compartida
+    4  chmod 777 /home/daw2/compartida
+    5  nano /etc/samba/smb.conf 
+    6  /etc/init.d/samba restart
+    7  history > /home/daw2/examen/actividad1/act1.txt
